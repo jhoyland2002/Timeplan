@@ -26,7 +26,6 @@ try:
     data = pd.read_csv(path, skiprows=3,parse_dates=True)
     columns=['Startdato', 'Starttidspunkt','Rom', 'Emnekode,Emnenavn']
     startdat=(data[['Startdato', 'Starttidspunkt','Rom', 'Emnekode,Emnenavn']])
-    print(startdat)
     rows=len(startdat.axes[0])
     columns = len(startdat.axes[1])
     for column in range(columns):
