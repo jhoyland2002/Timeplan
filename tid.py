@@ -1,6 +1,6 @@
 import pathlib
 
-def datoforskjell(workdir):
+def datoforskjell():
     import datetime
     import os
     old_date=None
