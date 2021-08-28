@@ -5,10 +5,12 @@ def datoforskjell():
     import os
     old_date=None
     path= pathlib.Path(__file__).parent / 'tider.txt'
-    with open(path, "r") as f:
-        if os.stat(path).st_size != 0:
-            old_date = datetime.datetime.fromisoformat(f.read())
-
+    try:
+        with open(path, "r") as f:
+                if os.stat(path).st_size != 0:
+                    old_date = datetime.datetime.fromisoformat(f.read())
+    except:
+        pass
 
     x = datetime.datetime.now()
     if old_date==None or x-old_date>datetime.timedelta(days=1):
